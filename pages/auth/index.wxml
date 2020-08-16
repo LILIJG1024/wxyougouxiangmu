@@ -1,0 +1,3 @@
+<Tabs bind:tabsitemchange="handleTabsChange" tabs="{{tabs}}">
+  <image mode="widthFix" style="width:100vw" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597129221662&di=7fd2de38baccd6776d3dc063104a8210&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F17%2F05%2F23%2F0d2019a7ca7937adaf34a3b15fd7b92e.jpg"/>
+</Tabs>

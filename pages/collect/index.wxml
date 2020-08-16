@@ -1,0 +1,19 @@
+<Tabs bind:tabsitemchange="handleTabsChange" tabs="{{tabs}}">
+    <view class="collect_main">
+        <view class="collect_content">
+            <view class="first_tab">
+                <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" wx:for="{{collect}}" wx:key="goods_id" class="goods_item">
+                    <!-- 左侧 -->
+                    <view class="img">
+                        <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" />
+                    </view>
+                    <!-- 右侧 -->
+                    <view class="goods_info">
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">￥{{item.goods_price}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</Tabs>

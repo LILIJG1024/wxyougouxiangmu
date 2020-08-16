@@ -1,0 +1,69 @@
+/* pages/category/index.wxss */
+
+page {
+    height: 100%;
+}
+
+.fenlei_index {
+    height: 100%;
+}
+
+.fenlei_index .cates_container {
+    height: calc( 100vh - 90rpx);
+    display: flex;
+}
+
+.fenlei_index .cates_container .left_menu {
+    flex: 2;
+}
+
+.fenlei_index .cates_container .right_content {
+    flex: 5;
+}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_title {
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_title .delimiter {
+    color: silver;
+    padding: 0 10rpx;
+}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_title .title {}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_list navigator {
+    width: 33.33%;
+    text-align: center;
+}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_list navigator image {
+    width: 70%;
+}
+
+.fenlei_index .cates_container .right_content .goods_group .goods_list navigator .goods_name {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.fenlei_index .cates_container .left_menu .menu_item {
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+}
+
+.fenlei_index .cates_container .left_menu .active {
+    color: whitesmoke;
+    border-left: 5rpx solid rgb(153, 68, 93);
+    background-color: rgb(247, 194, 207);
+    border-radius: 15rpx;
+}

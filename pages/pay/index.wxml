@@ -1,0 +1,41 @@
+<view class="revice_address_row">
+    <view class="user_info_row">
+        <view class="user_info">
+            <view class="user_infoname">Name: {{address.userName}}</view>
+            <view>Address: {{address.provinceName + address.cityName + address.countyName + address.detailInfo}}</view>
+        </view>
+        <view class="user_phone"><view >Tel:</view>{{address.telNumber}}</view>
+    </view>
+</view>
+
+<view class="cart_content">
+    <view class="cart_title"><text class="iconfont .icon-tuihuotuikuan_dianpu"></text>  待结算</view>
+    <view class="cart_main">
+        <view wx:for="{{checkedCart}}" wx:key="goods_id" class="cart_item">
+            <navigator class="cart_img_wrap">
+                <image src="{{item.goods_small_logo}}" mode="widthFix"/>
+            </navigator>
+            <view class="cart_info_wrap">
+                <view class="goods_name">{{item.goods_name}}</view>
+                <view class="goods_price_wrap">
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                    <view class="cart_num_tool">
+                        <view class="goods_num">X {{item.num}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="footer_tool">
+    <view class="total_price_wrap">
+        <view class="total_pirce">
+            All:<text class="total_price_text">￥{{totalprice}}</text>
+        </view>
+        <view class="yunfei">Tip：含运费</view>
+    </view>
+    <view class="order_pay_wrap" bind:tap="handleOrderPay">
+        支付 ({{totalnum}})
+    </view>
+</view>

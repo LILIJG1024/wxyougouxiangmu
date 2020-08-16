@@ -1,0 +1,4 @@
+/* pages/auth/index.wxss */
+page{
+  background-color: rgb(246, 246, 246);
+}

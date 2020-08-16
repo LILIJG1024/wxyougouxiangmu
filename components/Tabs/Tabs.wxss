@@ -1,0 +1,22 @@
+.tabs {}
+
+.tabs_title {
+    display: flex;
+}
+
+.title_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 15rpx 0;
+}
+
+.active {
+    color: rgb(34, 78, 224);
+    border-bottom: 8rpx solid rgb(231, 24, 24);
+    border-radius: 8rpx;
+    background: linear-gradient(135deg, rgba(255, 68, 199, .5), rgba(218, 41, 79, .5));
+}
+
+.tabs_content {}

@@ -1,0 +1,165 @@
+/* pages/cart/index.wxss */
+@import "../../styles/iconfont.wxss";
+page{
+    padding-bottom: 100rpx;
+}
+.iconfont{
+    font-size: 28px;
+}
+.revice_address_row{
+    .address_btn{
+        padding: 20rpx;
+        button{
+            width: 60%;
+        }
+    }
+    .user_info_row{
+        padding: 20rpx;
+        display: flex;
+        .user_info{
+            background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,yellow,#6d214f,#2e86de,#4cd137,#e84118);
+            font-weight: 600;
+            padding: 10rpx;
+            flex: 6;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            .user_infoname{
+                padding-bottom: 5rpx;
+            }
+        }
+        .user_phone{
+            margin-top: 20rpx;
+            flex: 3;
+            text-align: left;    
+            font-weight: 600;
+            background: -webkit-linear-gradient(left, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;     
+        }
+    }
+}
+.cart_content{
+    .cart_title{
+        padding: 20rpx;
+        font-size: 36rpx;
+        color: var(--themeColor);
+        border-top:5rpx  solid salmon;
+        border-bottom:5rpx  solid salmon;
+        font-weight: 500;
+    }
+    .cart_main{
+        .cart_item{
+            display: flex;
+            padding: 10rpx;
+            border-bottom: 1rpx solid #192a56;
+            .cart_chk_wrap{
+                flex: 0.5;
+                padding-left: 20rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                checkbox-group{
+                    checkbox{}
+                }
+            }
+            .cart_img_wrap{
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                image{
+                    width: 80%;
+                }
+            }
+            .cart_info_wrap{
+                flex: 4;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .goods_name{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    color: silver;
+                }
+                .goods_price_wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    .goods_price{
+                        color: rgb(214, 35, 134);
+                        font-size: 34rpx;
+                    }
+                    .cart_num_tool{
+                        display: flex;
+                        padding-right: 15rpx;
+                        .num_edit{
+                            width: 55rpx;
+                            height: 55rpx;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1rpx solid #cccccc;
+                            border-radius: 15rpx;
+                            font-family: sans-serif;
+                        }
+                        .goods_num{
+                            color: rgb(80, 80, 151);
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            width: 55rpx;
+                            height: 55rpx;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer_tool{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #fff;
+    display: flex;
+    border: 2rpx solid salmon;
+    .all_chk_wrap{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .total_price_wrap{
+        flex: 5;
+        padding-top: 10rpx;
+        padding-right: 15rpx;
+        text-align: right;
+        .total_pirce{
+            line-height: 80rpx;
+            font-weight: 500;
+            font-size: 42rpx;
+            color: rgb(131, 10, 218);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            .total_price_text{
+                color: var(--themeColor);
+                font-size: 42rpx;
+                font-weight: 600;
+            }
+        }
+    }
+    .order_pay_wrap{
+        text-align: center;
+        line-height: 100rpx;
+        flex: 3;
+        background-color: rgb(214, 35, 65);
+        font-size: 36rpx;
+        font-weight: 600;
+        color: #fff;
+    }
+}

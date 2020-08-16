@@ -1,0 +1,60 @@
+<view class="revice_address_row">
+    <view class="address_btn" wx:if="{{!address.userName}}">
+        <button bind:tap="handlePut" type="primary" plain="{{true}}">+添加收货地址</button>
+    </view>
+    <view wx:else class="user_info_row">
+        <view class="user_info">
+            <view class="user_infoname">Name: {{address.userName}}</view>
+            <view>Address: {{address.provinceName + address.cityName + address.countyName + address.detailInfo}}</view>
+        </view>
+        <view class="user_phone"><view >Tel:</view>{{address.telNumber}}</view>
+    </view>
+</view>
+
+<view class="cart_content">
+    <view class="cart_title"><text class="iconfont icon-gouwuche"></text>  购物车</view>
+    <view class="cart_main">
+        <block wx:if="{{cart.length!==0}}">
+            <view wx:for="{{cart}}" wx:key="goods_id" class="cart_item">
+            <view class="cart_chk_wrap">
+                <checkbox-group data-id="{{item.goods_id}}" bindchange="handleItemChange">
+                    <checkbox checked="{{item.checked}}" />
+                </checkbox-group>
+            </view>
+            <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="cart_img_wrap">
+                <image src="{{item.goods_small_logo}}" mode="widthFix"/>
+            </navigator>
+            <view class="cart_info_wrap">
+                <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="goods_name">{{item.goods_name}}</navigator>
+                <view class="goods_price_wrap">
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                    <view class="cart_num_tool">
+                        <view bind:tap="handleNum" data-operation="{{-1}}" data-id="{{item.goods_id}}" class="num_edit">-</view>
+                        <view class="goods_num">{{item.num}}</view>
+                        <view bind:tap="handleNum" data-operation="{{1}}" data-id="{{item.goods_id}}" class="num_edit">+</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        </block>
+        <block wx:else>
+            <image mode="widthFix" style="width:100vw" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597129221662&di=7fd2de38baccd6776d3dc063104a8210&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F17%2F05%2F23%2F0d2019a7ca7937adaf34a3b15fd7b92e.jpg"/>
+        </block>
+    </view>
+</view>
+
+<view class="footer_tool">
+    <view class="all_chk_wrap">
+        <checkbox-group bindchange="handleItemAllChange">
+            <checkbox checked="{{allChecked}}"/>全选
+        </checkbox-group>
+    </view>
+    <view class="total_price_wrap">
+        <view class="total_pirce">
+            All:<text class="total_price_text">￥{{totalprice}}</text>
+        </view>
+    </view>
+    <view bind:tap="handlePay" class="order_pay_wrap">
+        结算 ({{totalnum}})
+    </view>
+</view>

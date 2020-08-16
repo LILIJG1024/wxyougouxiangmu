@@ -1,0 +1,23 @@
+/* components/Search/Search.wxss */
+
+@import "../../styles/iconfont.wxss";
+.search_input {
+    height: 80rpx;
+    padding: 0 10rpx 10rpx;
+    background-color: var(--themeColor);
+}
+
+.search_input navigator {
+    height: 98%;
+    border-radius: 15rpx;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 242, 242);
+}
+
+.search_input navigator text {
+    height: 18px;
+    width: 18px;
+}
