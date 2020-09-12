@@ -41,8 +41,8 @@
         <text class="iconfont icon-gouwuche"></text>
         Add to Cart
     </view>
-    <view class="tool_item btn-buy">
+    <navigator open-type="switchTab" bind:tap="handleCartAdd" url="/pages/cart/index" class="tool_item btn-buy">
         <text class="iconfont .icon-tuihuotuikuan_dianpu"></text>
         Buy it Now
-    </view>
+    </navigator>
 </view>
